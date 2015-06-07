@@ -5,7 +5,7 @@ if (!exists("hpconsumption") )
 
 
 #Use Pdf device
-#Note: I used pdf device here - screen output an dev.copy does not
+#Note: I used pdf device here - screen output and dev.copy does not
 #generate a correct pdf output!
 
 pdf(file="./Rplot4.pdf");

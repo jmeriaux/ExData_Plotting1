@@ -4,7 +4,7 @@ if (!exists("hpconsumption") )
 {source("./LoadData.R")}
 
 #Use Pdf device
-#Note: I used pdf device here - screen output an dev.copy does not
+#Note: I used pdf device here - screen output and dev.copy does not
 #generate a correct pdf output!
 
 pdf(file="./Rplot3.pdf");
