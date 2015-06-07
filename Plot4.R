@@ -3,15 +3,12 @@
 if (!exists("hpconsumption") ) 
 {source("./LoadData.R")}
 
+#Set plot size
+par(pin = c(3, 2.7));
 
-#Use Pdf device
-#Note: I used pdf device here - screen output and dev.copy does not
-#generate a correct pdf output!
-
-pdf(file="./Rplot4.pdf");
 
 # Set the layout: 4 figures arranged in 2 rows and 2 columns
-par(mfrow=c(2,2))
+par(mfrow=c(2,2));
 
 #plot graph 1
 plot(hpcon$Tstamp,hpcon$Global_active_power, type = "l",xlab="",ylab="Global Active Power");
@@ -28,6 +25,4 @@ legend("topright",bty="n",pt.lwd=0.1, pt.cex=0.1, lty=1,pch="_", col = c("black"
 #plot graph 4
 plot(hpcon$Tstamp,hpcon$Global_reactive_power, type = "l",xlab="datetime",ylab="Global reactive power");
 
-#Close device
-dev.off();
 

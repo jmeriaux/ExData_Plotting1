@@ -3,14 +3,9 @@
 if (!exists("hpconsumption") ) 
   {source("./LoadData.R")}
 
-#Reset device output
-#dev.off();
-
-
+#Set plot size
+par(pin = c(5, 5));
+            
 #Plot grah
 plot(hpcon$Tstamp,hpcon$Global_active_power, type = "l", xlab="",ylab="Global Active Power (kilowatts)");
 
-#Plot in pdf file
-dev.copy(device=pdf,file="./Rplot2.pdf");
-
-dev.off();
